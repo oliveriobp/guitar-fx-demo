@@ -14,16 +14,16 @@
   // ═══════════════════════════════════════════════════════════
 
   const EFFECT_META = {
-    rat:            { category: "distortion",  icon: "🔥", categoryLabel: "Distortion" },
-    tubeScreamer:   { category: "distortion",  icon: "⚡", categoryLabel: "Distortion" },
-    flanger:        { category: "modulation",  icon: "🌀", categoryLabel: "Modulation" },
-    phaser:         { category: "modulation",  icon: "🔄", categoryLabel: "Modulation" },
-    digitalDelay:   { category: "delay",       icon: "📡", categoryLabel: "Delay" },
-    sweepEcho:      { category: "delay",       icon: "🌊", categoryLabel: "Delay" },
-    tapeEcho:       { category: "delay",       icon: "📼", categoryLabel: "Delay" },
-    hallReverb:     { category: "reverb",      icon: "🏛️", categoryLabel: "Reverb" },
-    plateReverb:    { category: "reverb",      icon: "🪩", categoryLabel: "Reverb" },
-    "spring-Reverb":{ category: "reverb",      icon: "🌿", categoryLabel: "Reverb" },
+    rat: { category: "distortion", categoryLabel: "Distortion" },
+    tubeScreamer: { category: "distortion", categoryLabel: "Distortion" },
+    flanger: { category: "modulation", categoryLabel: "Modulation" },
+    phaser: { category: "modulation", categoryLabel: "Modulation" },
+    digitalDelay: { category: "delay", categoryLabel: "Delay" },
+    sweepEcho: { category: "delay", categoryLabel: "Delay" },
+    tapeEcho: { category: "delay", categoryLabel: "Delay" },
+    hallReverb: { category: "reverb", categoryLabel: "Reverb" },
+    plateReverb: { category: "reverb", categoryLabel: "Reverb" },
+    "spring-Reverb": { category: "reverb", categoryLabel: "Reverb" },
   };
 
   // Desired display order: Distortion → Modulation → Delay → Reverb
@@ -33,20 +33,20 @@
   // DOM references
   // ═══════════════════════════════════════════════════════════
 
-  const tabsContainer      = document.getElementById("excerpt-tabs");
-  const cleanAudio         = document.getElementById("clean-audio");
-  const cleanSpecToggle    = document.getElementById("clean-spec-toggle");
+  const tabsContainer = document.getElementById("excerpt-tabs");
+  const cleanAudio = document.getElementById("clean-audio");
+  const cleanSpecToggle = document.getElementById("clean-spec-toggle");
   const cleanSpecAccordion = document.getElementById("clean-spec-accordion");
-  const cleanSpecImg       = document.getElementById("clean-spec-img");
-  const effectsGrid        = document.getElementById("effects-grid");
-  const effectsCount       = document.getElementById("effects-count");
-  const loadingEl          = document.getElementById("loading");
+  const cleanSpecImg = document.getElementById("clean-spec-img");
+  const effectsGrid = document.getElementById("effects-grid");
+  const effectsCount = document.getElementById("effects-count");
+  const loadingEl = document.getElementById("loading");
 
   // ═══════════════════════════════════════════════════════════
   // State
   // ═══════════════════════════════════════════════════════════
 
-  let manifest      = null;
+  let manifest = null;
   let activeExcerpt = null;
 
   // ═══════════════════════════════════════════════════════════
@@ -81,7 +81,7 @@
   }
 
   function createEffectRow(effect, predictions, index) {
-    const meta = EFFECT_META[effect.name] || { category: "other", icon: "🎵", categoryLabel: "Other" };
+    const meta = EFFECT_META[effect.name] || { category: "other", categoryLabel: "Other" };
     const preds = predictions[effect.name] || {};
 
     const row = document.createElement("div");
@@ -93,7 +93,6 @@
 
     row.innerHTML = `
       <div class="effect-row__name">
-        <span class="effect-icon">${meta.icon}</span>
         ${effect.displayName}
         <span class="effect-category effect-category--${meta.category}">
           ${meta.categoryLabel}
@@ -254,7 +253,7 @@
       console.error("Failed to load manifest:", err);
       loadingEl.innerHTML = `
         <div style="color: #ff6b6b; text-align: center; padding: 48px;">
-          <p style="font-size: 1.2rem; margin-bottom: 8px;">⚠️ Could not load audio data</p>
+          <p style="font-size: 1.2rem; margin-bottom: 8px;">Could not load audio data</p>
           <p style="font-size: 0.85rem; color: #9898b0;">
             Make sure <code>manifest.json</code> exists and you're serving this page via a local server.
             <br><br>

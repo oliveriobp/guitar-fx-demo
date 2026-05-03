@@ -6,7 +6,7 @@
   <meta name="description" content="Neural guitar effects transfer demo — comparing U-Net (FiLM) and ConvVAE models on real guitar excerpts from the Guitar-TECHS dataset.">
   <title>Neural Guitar FX — Model Demo</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>FX</text></svg>">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
       <!-- Model info cards -->
       <div class="model-info">
         <div class="model-card model-card--unet">
-          <div class="model-card__icon">🔷</div>
+          <div class="model-card__icon">U</div>
           <div class="model-card__name">U-Net (Log Spectrogram)</div>
           <p class="model-card__desc">
             Conditional U-Net with FiLM layers for effect-conditioned spectrogram transformation.
@@ -38,7 +38,7 @@
           <span class="model-card__tag">ConditionalUNet + FiLM</span>
         </div>
         <div class="model-card model-card--convvae">
-          <div class="model-card__icon">🔶</div>
+          <div class="model-card__icon">V</div>
           <div class="model-card__name">Convolutional VAE</div>
           <p class="model-card__desc">
             Convolutional Variational Autoencoder with deterministic latent inference and
@@ -62,7 +62,6 @@
       <!-- Clean Input -->
       <div class="clean-section" id="clean-section">
         <div class="clean-section__label">
-          <span class="icon">🎸</span>
           Clean Input — Guitar-TECHS Direct Input
         </div>
         <audio id="clean-audio" controls preload="metadata">
