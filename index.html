@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neural guitar effects transfer demo — comparing U-Net (FiLM) and ConvVAE models on real guitar excerpts from the Guitar-TECHS dataset.">
+  <title>Neural Guitar FX — Model Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>">
+</head>
+<body>
+
+  <!-- ═══════════ Hero ═══════════ -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero__badge">
+        <span class="dot"></span>
+        Neural Audio Effects
+      </div>
+      <h1 class="hero__title">
+        Guitar FX <span>Transfer</span>
+      </h1>
+      <p class="hero__subtitle">
+        Comparing two neural architectures for transforming clean electric guitar audio
+        into 10 different effects — from distortion to reverb — using models trained on the
+        <strong>EGFxSet</strong> dataset.
+      </p>
+
+      <!-- Model info cards -->
+      <div class="model-info">
+        <div class="model-card model-card--unet">
+          <div class="model-card__icon">🔷</div>
+          <div class="model-card__name">U-Net (Log Spectrogram)</div>
+          <p class="model-card__desc">
+            Conditional U-Net with FiLM layers for effect-conditioned spectrogram transformation.
+            Operates in log-compressed magnitude space with skip connections and conditioning dropout.
+          </p>
+          <span class="model-card__tag">ConditionalUNet + FiLM</span>
+        </div>
+        <div class="model-card model-card--convvae">
+          <div class="model-card__icon">🔶</div>
+          <div class="model-card__name">Convolutional VAE</div>
+          <p class="model-card__desc">
+            Convolutional Variational Autoencoder with deterministic latent inference and
+            effect-conditioned decoding. Operates on linear magnitude spectrograms.
+          </p>
+          <span class="model-card__tag">convVAE + Effect Embedding</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ Main Content ═══════════ -->
+  <main class="container">
+    <section class="excerpt-section">
+
+      <!-- Excerpt Tabs -->
+      <nav class="excerpt-tabs" id="excerpt-tabs" aria-label="Guitar excerpt selection">
+        <!-- Populated by JS -->
+      </nav>
+
+      <!-- Clean Input -->
+      <div class="clean-section" id="clean-section">
+        <div class="clean-section__label">
+          <span class="icon">🎸</span>
+          Clean Input — Guitar-TECHS Direct Input
+        </div>
+        <audio id="clean-audio" controls preload="metadata">
+          Your browser does not support the audio element.
+        </audio>
+        <button class="spec-toggle clean-spec-toggle" id="clean-spec-toggle" type="button">
+          <span class="spec-toggle__chevron">▶</span>
+          Show Spectrogram
+        </button>
+        <div class="spec-accordion" id="clean-spec-accordion">
+          <div class="spec-accordion__inner">
+            <div class="spec-images spec-images--single">
+              <div class="spec-block spec-block--clean">
+                <div class="spec-block__label">Input Spectrogram</div>
+                <img class="spec-block__img" id="clean-spec-img" alt="Clean input spectrogram" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Effects Grid -->
+      <div class="effects-header">
+        <h2 class="effects-header__title">Effect Predictions</h2>
+        <span class="effects-header__count" id="effects-count"></span>
+      </div>
+
+      <div class="effects-grid" id="effects-grid">
+        <!-- Populated by JS -->
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ═══════════ Footer ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        Models trained on the
+        <a href="https://github.com/iranroman/Controllable_EGFxSet_VAE" class="footer__link" target="_blank" rel="noopener">EGFxSet</a>
+        dataset · Input audio from
+        <a href="https://zenodo.org/records/13930501" class="footer__link" target="_blank" rel="noopener">Guitar-TECHS</a>
+        <br>
+        Audio reconstructed via Griffin-Lim · Built for FYP at QMUL
+      </p>
+    </div>
+  </footer>
+
+  <!-- Loading overlay -->
+  <div class="loading" id="loading">
+    <div class="loading__spinner"></div>
+    <div class="loading__text">Loading audio data…</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

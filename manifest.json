@@ -1,0 +1,332 @@
+{
+  "excerpts": [
+    {
+      "id": "excerpt_01",
+      "label": "Excerpt 1 \u2014 Full Band Piece",
+      "cleanAudio": "audio/excerpt_01/clean.wav",
+      "cleanSpec": "audio/excerpt_01/specs/clean.png",
+      "predictions": {
+        "digitalDelay": {
+          "unet": "audio/excerpt_01/unet/digitalDelay.wav",
+          "convvae": "audio/excerpt_01/convvae/digitalDelay.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_digitalDelay.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_digitalDelay.png"
+        },
+        "flanger": {
+          "unet": "audio/excerpt_01/unet/flanger.wav",
+          "convvae": "audio/excerpt_01/convvae/flanger.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_flanger.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_flanger.png"
+        },
+        "hallReverb": {
+          "unet": "audio/excerpt_01/unet/hallReverb.wav",
+          "convvae": "audio/excerpt_01/convvae/hallReverb.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_hallReverb.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_hallReverb.png"
+        },
+        "phaser": {
+          "unet": "audio/excerpt_01/unet/phaser.wav",
+          "convvae": "audio/excerpt_01/convvae/phaser.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_phaser.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_phaser.png"
+        },
+        "plateReverb": {
+          "unet": "audio/excerpt_01/unet/plateReverb.wav",
+          "convvae": "audio/excerpt_01/convvae/plateReverb.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_plateReverb.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_plateReverb.png"
+        },
+        "rat": {
+          "unet": "audio/excerpt_01/unet/rat.wav",
+          "convvae": "audio/excerpt_01/convvae/rat.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_rat.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_rat.png"
+        },
+        "spring-Reverb": {
+          "unet": "audio/excerpt_01/unet/spring-Reverb.wav",
+          "convvae": "audio/excerpt_01/convvae/spring-Reverb.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_spring-Reverb.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_spring-Reverb.png"
+        },
+        "sweepEcho": {
+          "unet": "audio/excerpt_01/unet/sweepEcho.wav",
+          "convvae": "audio/excerpt_01/convvae/sweepEcho.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_sweepEcho.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_sweepEcho.png"
+        },
+        "tapeEcho": {
+          "unet": "audio/excerpt_01/unet/tapeEcho.wav",
+          "convvae": "audio/excerpt_01/convvae/tapeEcho.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_tapeEcho.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_tapeEcho.png"
+        },
+        "tubeScreamer": {
+          "unet": "audio/excerpt_01/unet/tubeScreamer.wav",
+          "convvae": "audio/excerpt_01/convvae/tubeScreamer.wav",
+          "unetSpec": "audio/excerpt_01/specs/unet_tubeScreamer.png",
+          "convvaeSpec": "audio/excerpt_01/specs/convvae_tubeScreamer.png"
+        }
+      }
+    },
+    {
+      "id": "excerpt_03",
+      "label": "Excerpt 3 \u2014 Melodic Passage",
+      "cleanAudio": "audio/excerpt_03/clean.wav",
+      "cleanSpec": "audio/excerpt_03/specs/clean.png",
+      "predictions": {
+        "digitalDelay": {
+          "unet": "audio/excerpt_03/unet/digitalDelay.wav",
+          "convvae": "audio/excerpt_03/convvae/digitalDelay.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_digitalDelay.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_digitalDelay.png"
+        },
+        "flanger": {
+          "unet": "audio/excerpt_03/unet/flanger.wav",
+          "convvae": "audio/excerpt_03/convvae/flanger.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_flanger.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_flanger.png"
+        },
+        "hallReverb": {
+          "unet": "audio/excerpt_03/unet/hallReverb.wav",
+          "convvae": "audio/excerpt_03/convvae/hallReverb.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_hallReverb.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_hallReverb.png"
+        },
+        "phaser": {
+          "unet": "audio/excerpt_03/unet/phaser.wav",
+          "convvae": "audio/excerpt_03/convvae/phaser.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_phaser.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_phaser.png"
+        },
+        "plateReverb": {
+          "unet": "audio/excerpt_03/unet/plateReverb.wav",
+          "convvae": "audio/excerpt_03/convvae/plateReverb.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_plateReverb.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_plateReverb.png"
+        },
+        "rat": {
+          "unet": "audio/excerpt_03/unet/rat.wav",
+          "convvae": "audio/excerpt_03/convvae/rat.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_rat.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_rat.png"
+        },
+        "spring-Reverb": {
+          "unet": "audio/excerpt_03/unet/spring-Reverb.wav",
+          "convvae": "audio/excerpt_03/convvae/spring-Reverb.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_spring-Reverb.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_spring-Reverb.png"
+        },
+        "sweepEcho": {
+          "unet": "audio/excerpt_03/unet/sweepEcho.wav",
+          "convvae": "audio/excerpt_03/convvae/sweepEcho.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_sweepEcho.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_sweepEcho.png"
+        },
+        "tapeEcho": {
+          "unet": "audio/excerpt_03/unet/tapeEcho.wav",
+          "convvae": "audio/excerpt_03/convvae/tapeEcho.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_tapeEcho.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_tapeEcho.png"
+        },
+        "tubeScreamer": {
+          "unet": "audio/excerpt_03/unet/tubeScreamer.wav",
+          "convvae": "audio/excerpt_03/convvae/tubeScreamer.wav",
+          "unetSpec": "audio/excerpt_03/specs/unet_tubeScreamer.png",
+          "convvaeSpec": "audio/excerpt_03/specs/convvae_tubeScreamer.png"
+        }
+      }
+    },
+    {
+      "id": "excerpt_07",
+      "label": "Excerpt 7 \u2014 Rhythmic Section",
+      "cleanAudio": "audio/excerpt_07/clean.wav",
+      "cleanSpec": "audio/excerpt_07/specs/clean.png",
+      "predictions": {
+        "digitalDelay": {
+          "unet": "audio/excerpt_07/unet/digitalDelay.wav",
+          "convvae": "audio/excerpt_07/convvae/digitalDelay.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_digitalDelay.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_digitalDelay.png"
+        },
+        "flanger": {
+          "unet": "audio/excerpt_07/unet/flanger.wav",
+          "convvae": "audio/excerpt_07/convvae/flanger.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_flanger.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_flanger.png"
+        },
+        "hallReverb": {
+          "unet": "audio/excerpt_07/unet/hallReverb.wav",
+          "convvae": "audio/excerpt_07/convvae/hallReverb.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_hallReverb.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_hallReverb.png"
+        },
+        "phaser": {
+          "unet": "audio/excerpt_07/unet/phaser.wav",
+          "convvae": "audio/excerpt_07/convvae/phaser.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_phaser.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_phaser.png"
+        },
+        "plateReverb": {
+          "unet": "audio/excerpt_07/unet/plateReverb.wav",
+          "convvae": "audio/excerpt_07/convvae/plateReverb.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_plateReverb.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_plateReverb.png"
+        },
+        "rat": {
+          "unet": "audio/excerpt_07/unet/rat.wav",
+          "convvae": "audio/excerpt_07/convvae/rat.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_rat.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_rat.png"
+        },
+        "spring-Reverb": {
+          "unet": "audio/excerpt_07/unet/spring-Reverb.wav",
+          "convvae": "audio/excerpt_07/convvae/spring-Reverb.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_spring-Reverb.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_spring-Reverb.png"
+        },
+        "sweepEcho": {
+          "unet": "audio/excerpt_07/unet/sweepEcho.wav",
+          "convvae": "audio/excerpt_07/convvae/sweepEcho.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_sweepEcho.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_sweepEcho.png"
+        },
+        "tapeEcho": {
+          "unet": "audio/excerpt_07/unet/tapeEcho.wav",
+          "convvae": "audio/excerpt_07/convvae/tapeEcho.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_tapeEcho.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_tapeEcho.png"
+        },
+        "tubeScreamer": {
+          "unet": "audio/excerpt_07/unet/tubeScreamer.wav",
+          "convvae": "audio/excerpt_07/convvae/tubeScreamer.wav",
+          "unetSpec": "audio/excerpt_07/specs/unet_tubeScreamer.png",
+          "convvaeSpec": "audio/excerpt_07/specs/convvae_tubeScreamer.png"
+        }
+      }
+    },
+    {
+      "id": "excerpt_10",
+      "label": "Excerpt 10 \u2014 Expressive Solo",
+      "cleanAudio": "audio/excerpt_10/clean.wav",
+      "cleanSpec": "audio/excerpt_10/specs/clean.png",
+      "predictions": {
+        "digitalDelay": {
+          "unet": "audio/excerpt_10/unet/digitalDelay.wav",
+          "convvae": "audio/excerpt_10/convvae/digitalDelay.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_digitalDelay.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_digitalDelay.png"
+        },
+        "flanger": {
+          "unet": "audio/excerpt_10/unet/flanger.wav",
+          "convvae": "audio/excerpt_10/convvae/flanger.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_flanger.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_flanger.png"
+        },
+        "hallReverb": {
+          "unet": "audio/excerpt_10/unet/hallReverb.wav",
+          "convvae": "audio/excerpt_10/convvae/hallReverb.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_hallReverb.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_hallReverb.png"
+        },
+        "phaser": {
+          "unet": "audio/excerpt_10/unet/phaser.wav",
+          "convvae": "audio/excerpt_10/convvae/phaser.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_phaser.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_phaser.png"
+        },
+        "plateReverb": {
+          "unet": "audio/excerpt_10/unet/plateReverb.wav",
+          "convvae": "audio/excerpt_10/convvae/plateReverb.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_plateReverb.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_plateReverb.png"
+        },
+        "rat": {
+          "unet": "audio/excerpt_10/unet/rat.wav",
+          "convvae": "audio/excerpt_10/convvae/rat.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_rat.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_rat.png"
+        },
+        "spring-Reverb": {
+          "unet": "audio/excerpt_10/unet/spring-Reverb.wav",
+          "convvae": "audio/excerpt_10/convvae/spring-Reverb.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_spring-Reverb.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_spring-Reverb.png"
+        },
+        "sweepEcho": {
+          "unet": "audio/excerpt_10/unet/sweepEcho.wav",
+          "convvae": "audio/excerpt_10/convvae/sweepEcho.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_sweepEcho.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_sweepEcho.png"
+        },
+        "tapeEcho": {
+          "unet": "audio/excerpt_10/unet/tapeEcho.wav",
+          "convvae": "audio/excerpt_10/convvae/tapeEcho.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_tapeEcho.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_tapeEcho.png"
+        },
+        "tubeScreamer": {
+          "unet": "audio/excerpt_10/unet/tubeScreamer.wav",
+          "convvae": "audio/excerpt_10/convvae/tubeScreamer.wav",
+          "unetSpec": "audio/excerpt_10/specs/unet_tubeScreamer.png",
+          "convvaeSpec": "audio/excerpt_10/specs/convvae_tubeScreamer.png"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "index": 3,
+      "name": "digitalDelay",
+      "displayName": "Digital Delay"
+    },
+    {
+      "index": 4,
+      "name": "flanger",
+      "displayName": "Flanger"
+    },
+    {
+      "index": 5,
+      "name": "hallReverb",
+      "displayName": "Hall Reverb"
+    },
+    {
+      "index": 6,
+      "name": "phaser",
+      "displayName": "Phaser"
+    },
+    {
+      "index": 7,
+      "name": "plateReverb",
+      "displayName": "Plate Reverb"
+    },
+    {
+      "index": 8,
+      "name": "rat",
+      "displayName": "RAT Distortion"
+    },
+    {
+      "index": 9,
+      "name": "spring-Reverb",
+      "displayName": "Spring Reverb"
+    },
+    {
+      "index": 10,
+      "name": "sweepEcho",
+      "displayName": "Sweep Echo"
+    },
+    {
+      "index": 11,
+      "name": "tapeEcho",
+      "displayName": "Tape Echo"
+    },
+    {
+      "index": 12,
+      "name": "tubeScreamer",
+      "displayName": "Tube Screamer"
+    }
+  ],
+  "models": [
+    "unet",
+    "convvae"
+  ]
+}
