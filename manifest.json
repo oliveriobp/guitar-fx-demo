@@ -2,7 +2,7 @@
   "excerpts": [
     {
       "id": "excerpt_01",
-      "label": "Excerpt 1 \u2014 Full Band Piece",
+      "label": "Excerpt 1",
       "cleanAudio": "audio/excerpt_01/clean.wav",
       "cleanSpec": "audio/excerpt_01/specs/clean.png",
       "predictions": {
@@ -70,7 +70,7 @@
     },
     {
       "id": "excerpt_03",
-      "label": "Excerpt 3 \u2014 Melodic Passage",
+      "label": "Excerpt 3",
       "cleanAudio": "audio/excerpt_03/clean.wav",
       "cleanSpec": "audio/excerpt_03/specs/clean.png",
       "predictions": {
@@ -138,7 +138,7 @@
     },
     {
       "id": "excerpt_07",
-      "label": "Excerpt 7 \u2014 Rhythmic Section",
+      "label": "Excerpt 7",
       "cleanAudio": "audio/excerpt_07/clean.wav",
       "cleanSpec": "audio/excerpt_07/specs/clean.png",
       "predictions": {
@@ -206,7 +206,7 @@
     },
     {
       "id": "excerpt_10",
-      "label": "Excerpt 10 \u2014 Expressive Solo",
+      "label": "Excerpt 10",
       "cleanAudio": "audio/excerpt_10/clean.wav",
       "cleanSpec": "audio/excerpt_10/specs/clean.png",
       "predictions": {
