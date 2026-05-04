@@ -38,6 +38,7 @@
   const cleanSpecToggle = document.getElementById("clean-spec-toggle");
   const cleanSpecAccordion = document.getElementById("clean-spec-accordion");
   const cleanSpecImg = document.getElementById("clean-spec-img");
+  const cleanSectionLabel = document.getElementById("clean-section-label");
   const effectsGrid = document.getElementById("effects-grid");
   const effectsCount = document.getElementById("effects-count");
   const loadingEl = document.getElementById("loading");
@@ -198,6 +199,12 @@
     // Update clean audio + spectrogram
     cleanAudio.src = excerpt.cleanAudio;
     cleanSpecImg.src = excerpt.cleanSpec || "";
+
+    // Update clean section label based on source
+    const source = excerptId.startsWith("egfxset")
+      ? "Clean Input — EGFxSet (In-Distribution)"
+      : "Clean Input — Guitar-TECHS Direct Input";
+    cleanSectionLabel.textContent = source;
 
     // Reset clean accordion to closed
     cleanSpecToggle.classList.remove("active");

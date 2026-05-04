@@ -73,6 +73,24 @@ DISPLAY_NAMES = {
 # Effects to include (excluding Clean, bluesDriver, chorus)
 INCLUDED_EFFECTS = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
 
+# Shared-max correction factors.
+# During training, spectrograms are normalised by max(clean_spec, effect_spec).
+# At inference we only have the clean audio, so we scale the input DOWN by the
+# average shared_max / clean_max ratio measured over 50 training samples.
+# This ensures the model sees inputs in the same value range it was trained on.
+SHARED_MAX_CORRECTION = {
+    3:  1.028,   # Digital Delay
+    4:  1.499,   # Flanger
+    5:  1.045,   # Hall Reverb
+    6:  1.082,   # Phaser
+    7:  1.002,   # Plate Reverb
+    8:  1.270,   # RAT
+    9:  1.048,   # Spring Reverb
+    10: 1.015,   # Sweep Echo
+    11: 1.167,   # Tape Echo
+    12: 1.162,   # Tube Screamer
+}
+
 # Guitar-TECHS excerpts to use (indices into the 12 files, 1-based)
 # Pick 4 diverse excerpts
 EXCERPT_INDICES = [1, 3, 7, 10]
@@ -431,7 +449,11 @@ def load_convvae(ckpt_path: Path, device: torch.device) -> convVAE_deterministic
 @torch.no_grad()
 def predict_unet(model, spec_lin: torch.Tensor, eff_idx: int, device: torch.device):
     """Run U-Net inference. Returns (audio, pred_spec_linear)."""
-    spec_log = linear_to_log(spec_lin).unsqueeze(0).to(device)
+    # Apply shared-max correction: scale input down to match training distribution
+    correction = SHARED_MAX_CORRECTION.get(eff_idx, 1.0)
+    spec_corrected = spec_lin / correction
+
+    spec_log = linear_to_log(spec_corrected).unsqueeze(0).to(device)
     effB = torch.tensor([eff_idx], device=device)
 
     pred_log = model((spec_log, effB))
@@ -443,7 +465,11 @@ def predict_unet(model, spec_lin: torch.Tensor, eff_idx: int, device: torch.devi
 @torch.no_grad()
 def predict_convvae(model, spec_lin: torch.Tensor, eff_idx: int, device: torch.device):
     """Run ConvVAE inference. Returns (audio, pred_spec_linear)."""
-    spec_in = spec_lin.unsqueeze(0).to(device)
+    # Apply shared-max correction: scale input down to match training distribution
+    correction = SHARED_MAX_CORRECTION.get(eff_idx, 1.0)
+    spec_corrected = spec_lin / correction
+
+    spec_in = spec_corrected.unsqueeze(0).to(device)
     effB = torch.tensor([eff_idx], device=device)
 
     pred, _, _ = model((spec_in, effB), deterministic_latent=True)
@@ -467,6 +493,8 @@ def save_spectrogram(spec_np: np.ndarray, path: Path, title: str = ""):
         origin="lower",
         cmap="magma",
         interpolation="nearest",
+        vmin=-80,
+        vmax=0,
     )
 
     # Axis labels with proper units
