@@ -342,7 +342,7 @@ class convVAE_deterministic(nn.Module):
             h = F.interpolate(h, size=target_hw, mode="nearest")
             h = blk(h)
         h = self.out_conv(h)
-        h = F.relu(h)
+        h = F.softplus(h, beta=5)
         return h.squeeze(1)
 
     def forward(self, x, deterministic_latent=False):
